@@ -9,6 +9,7 @@ from app.commands import CommandHandler
 from app.commands import Command
 import logging
 import logging.config
+from app.history.manager import HistoryManager
 from dotenv import load_dotenv
 class App:
     #linting this block
@@ -19,40 +20,24 @@ class App:
         """
         This is the constructor for the App class
         """
-        os.makedirs('logs', exist_ok=True) #create a logs directory if it does not exist
-        self.configure_logging()
-        load_dotenv() #load the .env file
-        self.settings = self.load_environment_variables()
+        os.makedirs('logs', exist_ok=True)  # create a logs directory if it does not exist
+        os.makedirs('data', exist_ok=True)  # create a data directory for history files
+    
+    # Load config and set up logging
+        load_dotenv()  # load the .env file
+        from app.config import load_config, setup_logging
+        config = load_config()
+        setup_logging(config)
+    
+        self.settings = {key: value for key, value in os.environ.items()}
         self.settings.setdefault('ENV', 'DEV')
+    
+        # Initialize HistoryManager
+        self.history_manager = HistoryManager()
+        logging.info('History Manager initialized')
+    
+        # Initialize CommandHandler
         self.command_handler = CommandHandler()
-
-    def configure_logging(self):
-        """
-        This method configures the logging for the application
-        """
-        logging_conf_path = 'logging.conf'
-        if os.path.exists(logging_conf_path):
-            logging.config.fileConfig(logging_conf_path, disable_existing_loggers=False)
-        else:
-            #write logs to app.log file
-            logging.basicConfig(filename='logs/app.log', level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-            logging.getLogger('app').setLevel(logging.DEBUG)
-            logging.getLogger('app').addHandler(logging.StreamHandler())    
-
-    def load_environment_variables(self):
-        """
-        This method loads the environment variables
-        """
-    
-        settings = {key: value for key, value in os.environ.items()} #load all environment variables and store in a dictionary os.environ.items() returns a list of tuples of all environment variables.
-        logging.info('Environment Variables Loaded')
-        return settings
-    
-    def get_environment_variable(self, env_var: str = 'ENV'): #default value is 'ENV'
-        """
-        This method gets the environment variable
-        """
-        return self.settings.get(env_var, None)
 
 
 
