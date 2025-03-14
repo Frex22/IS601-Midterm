@@ -91,7 +91,7 @@ class HistoryManager:
                     self.logger.error(f"Failed to save history file: {e}")
                     return False
             
-    def get_history(self, limit: Optional[int] = None) -> pd.Dataframe:
+    def get_history(self, limit: Optional[int] = None) -> pd.DataFrame:
         """get history"""
         try:
             if limit and limit > 0:
