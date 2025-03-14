@@ -1,4 +1,5 @@
 from app.commands import Command
+from app.history import HistoryManager
 import logging
 def get_float (prompt):
     """
@@ -26,3 +27,6 @@ class DivideCommand(Command):
         result = a / b
         logging.info(f"Division Performed: {a} / {b} = {result}")        
         print(f"Result: {a} / {b} = {a / b}")
+        history_manager = HistoryManager()
+        history_manager.add_calculation('divide', [a, b], result)
+        history_manager.save_history()

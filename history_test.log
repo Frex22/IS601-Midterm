@@ -275,3 +275,82 @@ Testing clear functionality...
 2025-03-14 17:43:44,450 - INFO - 
 History functionality test completed successfully.
 2025-03-14 17:43:44,450 - INFO - Test completed with SUCCESS
+2025-03-14 18:05:44,345 - INFO - Starting comprehensive history functionality test...
+
+2025-03-14 18:05:44,348 - INFO - Current working directory: /home/aakash32/IS601/IS601-Midterm/IS605-midterm
+2025-03-14 18:05:44,348 - INFO - Resetting HistoryManager singleton instance
+2025-03-14 18:05:44,348 - INFO - History file should be at: /home/aakash32/IS601/IS601-Midterm/IS605-midterm/data/calculation_history.csv
+2025-03-14 18:05:44,348 - INFO - Data directory path: /home/aakash32/IS601/IS601-Midterm/IS605-midterm/data
+2025-03-14 18:05:44,348 - INFO - Data directory exists: True
+2025-03-14 18:05:44,348 - INFO - Found existing history file, size: 34 bytes
+2025-03-14 18:05:44,349 - INFO - Deleted existing history file for clean testing
+2025-03-14 18:05:44,349 - INFO - Creating HistoryManager instance...
+2025-03-14 18:05:44,349 - INFO - History Manager initialised
+2025-03-14 18:05:44,350 - INFO - History file not found, creating new file: 'data/calculation_history.csv'
+2025-03-14 18:05:44,350 - INFO - History manager initialised successfully with history file: {self.history_file}
+2025-03-14 18:05:44,350 - INFO - HistoryManager created in 0.001 seconds
+2025-03-14 18:05:44,350 - INFO - HistoryManager's history_file attribute: data/calculation_history.csv
+2025-03-14 18:05:44,350 - INFO - Full path: /home/aakash32/IS601/IS601-Midterm/IS605-midterm/data/calculation_history.csv
+2025-03-14 18:05:44,350 - INFO - 
+Adding test calculations...
+2025-03-14 18:05:44,350 - INFO - Calculation added to history: {'timestamp': '2025-03-14 18:05:44', 'operation': 'add', 'inputs': '[5, 3]', 'result': 8}
+2025-03-14 18:05:44,350 - INFO - Added add calculation: [5, 3] = 8, Success: True in 0.001 seconds
+2025-03-14 18:05:44,351 - INFO - Calculation added to history: {'timestamp': '2025-03-14 18:05:44', 'operation': 'subtract', 'inputs': '[10, 4]', 'result': 6}
+2025-03-14 18:05:44,351 - INFO - Added subtract calculation: [10, 4] = 6, Success: True in 0.000 seconds
+2025-03-14 18:05:44,351 - INFO - Calculation added to history: {'timestamp': '2025-03-14 18:05:44', 'operation': 'multiply', 'inputs': '[3, 7]', 'result': 21}
+2025-03-14 18:05:44,351 - INFO - Added multiply calculation: [3, 7] = 21, Success: True in 0.000 seconds
+2025-03-14 18:05:44,351 - INFO - Calculation added to history: {'timestamp': '2025-03-14 18:05:44', 'operation': 'divide', 'inputs': '[20, 5]', 'result': 4}
+2025-03-14 18:05:44,351 - INFO - Added divide calculation: [20, 5] = 4, Success: True in 0.000 seconds
+2025-03-14 18:05:44,352 - INFO - Current DataFrame has 4 rows and 4 columns
+2025-03-14 18:05:44,352 - INFO - DataFrame columns: ['timestamp', 'operation', 'inputs', 'result']
+2025-03-14 18:05:44,352 - INFO - 
+Saving history to file...
+2025-03-14 18:05:44,353 - INFO - History saved to data/calculation_history.csv
+2025-03-14 18:05:44,353 - INFO - Save history completed in 0.001 seconds
+2025-03-14 18:05:44,353 - INFO - Save history success: True
+2025-03-14 18:05:44,353 - INFO - History file exists after save: True
+2025-03-14 18:05:44,353 - INFO - History file size: 190 bytes
+2025-03-14 18:05:44,353 - INFO - History file permissions: 644
+2025-03-14 18:05:44,354 - INFO - 
+History file contents (4 rows):
+2025-03-14 18:05:44,355 - INFO - Row 0: {'timestamp': '2025-03-14 18:05:44', 'operation': 'add', 'inputs': '[5, 3]', 'result': 8}
+2025-03-14 18:05:44,356 - INFO - Row 1: {'timestamp': '2025-03-14 18:05:44', 'operation': 'subtract', 'inputs': '[10, 4]', 'result': 6}
+2025-03-14 18:05:44,356 - INFO - Row 2: {'timestamp': '2025-03-14 18:05:44', 'operation': 'multiply', 'inputs': '[3, 7]', 'result': 21}
+2025-03-14 18:05:44,356 - INFO - Row 3: {'timestamp': '2025-03-14 18:05:44', 'operation': 'divide', 'inputs': '[20, 5]', 'result': 4}
+2025-03-14 18:05:44,356 - INFO - 
+Testing search functionality...
+2025-03-14 18:05:44,358 - INFO - Search history for term: add
+2025-03-14 18:05:44,358 - INFO - Search completed in 0.002 seconds
+2025-03-14 18:05:44,358 - INFO - Search results for 'add' (1 rows):
+2025-03-14 18:05:44,358 - INFO - Search result 0: {'timestamp': '2025-03-14 18:05:44', 'operation': 'add', 'inputs': '[5, 3]', 'result': 8}
+2025-03-14 18:05:44,358 - INFO - 
+Testing delete functionality...
+2025-03-14 18:05:44,358 - INFO - Before delete: 4 entries
+2025-03-14 18:05:44,360 - INFO - Entry deleted from history: 0
+2025-03-14 18:05:44,361 - INFO - Delete completed in 0.002 seconds
+2025-03-14 18:05:44,361 - INFO - Delete entry at index 0 success: True
+2025-03-14 18:05:44,361 - INFO - After delete: 3 entries
+2025-03-14 18:05:44,361 - INFO - History saved to data/calculation_history.csv
+2025-03-14 18:05:44,361 - INFO - Save after delete completed in 0.001 seconds
+2025-03-14 18:05:44,362 - INFO - Save after delete success: True
+2025-03-14 18:05:44,362 - INFO - History file size after delete: 155 bytes
+2025-03-14 18:05:44,362 - INFO - History file contents after delete (3 rows):
+2025-03-14 18:05:44,363 - INFO - Row 0: {'timestamp': '2025-03-14 18:05:44', 'operation': 'subtract', 'inputs': '[10, 4]', 'result': 6}
+2025-03-14 18:05:44,363 - INFO - Row 1: {'timestamp': '2025-03-14 18:05:44', 'operation': 'multiply', 'inputs': '[3, 7]', 'result': 21}
+2025-03-14 18:05:44,363 - INFO - Row 2: {'timestamp': '2025-03-14 18:05:44', 'operation': 'divide', 'inputs': '[20, 5]', 'result': 4}
+2025-03-14 18:05:44,363 - INFO - 
+Testing clear functionality...
+2025-03-14 18:05:44,363 - INFO - Before clear: 3 entries
+2025-03-14 18:05:44,363 - INFO - History Cleared
+2025-03-14 18:05:44,363 - INFO - Clear completed in 0.000 seconds
+2025-03-14 18:05:44,363 - INFO - Clear history success: None
+2025-03-14 18:05:44,363 - INFO - After clear: 0 entries
+2025-03-14 18:05:44,364 - INFO - History saved to data/calculation_history.csv
+2025-03-14 18:05:44,364 - INFO - Save after clear completed in 0.000 seconds
+2025-03-14 18:05:44,364 - INFO - Save after clear success: True
+2025-03-14 18:05:44,364 - INFO - History file still exists after clear: True
+2025-03-14 18:05:44,364 - INFO - History file size after clear: 34 bytes
+2025-03-14 18:05:44,365 - INFO - History file contents after clear (0 rows):
+2025-03-14 18:05:44,365 - INFO - 
+History functionality test completed successfully.
+2025-03-14 18:05:44,365 - INFO - Test completed with SUCCESS

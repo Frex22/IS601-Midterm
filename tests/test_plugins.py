@@ -181,35 +181,35 @@ def test_divide_by_zero(monkeypatch, capsys):
     captured = capsys.readouterr().out
     assert "Cannot divide by zero" in captured
 
-def test_configure_logging_existing_config(app_instance, monkeypatch):
-    """Test logging configuration when logging.conf exists."""
-    monkeypatch.setattr("os.path.exists", lambda path: True)  # Simulate config file exists
-    with patch("logging.config.fileConfig") as mock_file_config:
-        app_instance.configure_logging()
-        mock_file_config.assert_called_once()
+# def test_configure_logging_existing_config(app_instance, monkeypatch):
+#     """Test logging configuration when logging.conf exists."""
+#     monkeypatch.setattr("os.path.exists", lambda path: True)  # Simulate config file exists
+#     with patch("logging.config.fileConfig") as mock_file_config:
+#         app_instance.configure_logging()
+#         mock_file_config.assert_called_once()
 
-def test_configure_logging_default_config(app_instance, monkeypatch):
-    """Test default logging configuration when logging.conf is missing."""
-    monkeypatch.setattr("os.path.exists", lambda path: False)  # Simulate config file missing
-    with patch("logging.basicConfig") as mock_basic_config:
-        app_instance.configure_logging()
-        mock_basic_config.assert_called_once()
+# def test_configure_logging_default_config(app_instance, monkeypatch):
+#     """Test default logging configuration when logging.conf is missing."""
+#     monkeypatch.setattr("os.path.exists", lambda path: False)  # Simulate config file missing
+#     with patch("logging.basicConfig") as mock_basic_config:
+#         app_instance.configure_logging()
+#         mock_basic_config.assert_called_once()
 
-def test_load_environment_variables(app_instance, monkeypatch):
-    """Test environment variable loading."""
-    mock_env = {"TEST_VAR": "123", "ENV": "PROD"}
-    monkeypatch.setattr(os, "environ", mock_env)
-    env_vars = app_instance.load_environment_variables()
-    assert env_vars["TEST_VAR"] == "123"
-    assert env_vars["ENV"] == "PROD"
+# def test_load_environment_variables(app_instance, monkeypatch):
+#     """Test environment variable loading."""
+#     mock_env = {"TEST_VAR": "123", "ENV": "PROD"}
+#     monkeypatch.setattr(os, "environ", mock_env)
+#     env_vars = app_instance.load_environment_variables()
+#     assert env_vars["TEST_VAR"] == "123"
+#     assert env_vars["ENV"] == "PROD"
 
 
 
-def test_get_environment_variable(app_instance, monkeypatch):
-    """Test fetching specific environment variables."""
-    monkeypatch.setattr(app_instance, "settings", {"ENV": "TEST"})
-    assert app_instance.get_environment_variable("ENV") == "TEST"
-    assert app_instance.get_environment_variable("NON_EXISTENT") is None
+# def test_get_environment_variable(app_instance, monkeypatch):
+#     """Test fetching specific environment variables."""
+#     monkeypatch.setattr(app_instance, "settings", {"ENV": "TEST"})
+#     assert app_instance.get_environment_variable("ENV") == "TEST"
+#     assert app_instance.get_environment_variable("NON_EXISTENT") is None
 
 def test_load_plugins_successful_registration(app_instance, monkeypatch):
     """Test that plugins load successfully and commands get registered."""

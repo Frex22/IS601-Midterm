@@ -1,4 +1,5 @@
 from app.commands import Command
+from app.history import HistoryManager
 import logging
 def get_float (prompt):
     """
@@ -19,4 +20,11 @@ class MultiplyCommand(Command):
         """
         a = get_float("Enter first number: ")
         b = get_float("Enter second number: ")
+        result = a * b
+        logging.info(f"Multiplication Performed: {a} * {b} = {result}")
         print(f"Result: {a} * {b} = {a * b}")
+
+        history_manager = HistoryManager()
+        history_manager.add_calculation('multiply', [a, b], result)
+        history_manager.save_history()
+

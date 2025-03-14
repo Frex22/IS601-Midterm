@@ -1,4 +1,5 @@
 from app.commands import Command
+from app.history import HistoryManager
 import logging
 def get_float (prompt):
     """
@@ -23,4 +24,8 @@ class SubCommand(Command):
         result = a - b
         logging.info(f"Subtraction Performed: {a} - {b} = {result}")
         print(f"Result: {a} - {b} = {a - b}")
+
+        history_manager = HistoryManager()
+        history_manager.add_calculation('sub', [a, b], result)
+        history_manager.save_history()
 

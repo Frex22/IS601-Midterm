@@ -310,3 +310,180 @@ ImportError: cannot import name 'HistoryManager' from 'app.history' (/home/aakas
 2025-03-14 13:48:00,219 - root - INFO - Value entered: 234.0
 2025-03-14 13:48:00,219 - root - INFO - Subtraction Performed: 3.0 - 234.0 = -231.0
 2025-03-14 13:59:24,647 - root - INFO - Exit command entered. Exiting the program
+2025-03-14 18:03:52,927 - app.config - INFO - Logging configured with level: INFO, file: logs/app.log
+2025-03-14 18:03:52,929 - app.history.manager - INFO - History Manager initialised
+2025-03-14 18:03:52,930 - app.history.manager - INFO - History loaded from data/calculation_history.csv
+2025-03-14 18:03:52,930 - app.history.manager - INFO - History manager initialised successfully with history file: {self.history_file}
+2025-03-14 18:03:52,930 - app.history.manager - INFO - History Manager initialised
+2025-03-14 18:03:52,931 - app.history.manager - INFO - History loaded from data/calculation_history.csv
+2025-03-14 18:03:52,931 - app.history.manager - INFO - History manager initialised successfully with history file: {self.history_file}
+2025-03-14 18:03:52,931 - app.history.manager - INFO - Calculation added to history: {'timestamp': '2025-03-14 18:03:52', 'operation': 'add', 'inputs': '[1, 2]', 'result': 3}
+2025-03-14 18:03:52,931 - app.history.manager - INFO - History Manager initialised
+2025-03-14 18:03:52,932 - app.history.manager - INFO - History loaded from data/calculation_history.csv
+2025-03-14 18:03:52,932 - app.history.manager - INFO - History manager initialised successfully with history file: {self.history_file}
+2025-03-14 18:03:52,932 - app.history.manager - INFO - History saved to data/calculation_history.csv
+2025-03-14 18:03:52,932 - root - INFO - History Manager initialized
+2025-03-14 18:03:52,933 - root - INFO - Starting Application
+2025-03-14 18:03:52,933 - root - INFO - Loading Plugins
+2025-03-14 18:03:52,933 - root - INFO - Registered command: AddCommand in plugin: add
+2025-03-14 18:03:52,933 - root - INFO - Completed loading plugins
+2025-03-14 18:03:52,933 - root - INFO - Registered command: DivideCommand in plugin: divide
+2025-03-14 18:03:52,933 - root - INFO - Completed loading plugins
+2025-03-14 18:03:52,934 - root - INFO - Registered command: ExitCommand in plugin: exit
+2025-03-14 18:03:52,934 - root - INFO - Completed loading plugins
+2025-03-14 18:03:52,934 - root - INFO - Registered command: GreetCommand in plugin: greet
+2025-03-14 18:03:52,934 - root - INFO - Completed loading plugins
+2025-03-14 18:03:52,934 - app.history.manager - INFO - History Manager initialised
+2025-03-14 18:03:52,936 - app.history.manager - INFO - History loaded from data/calculation_history.csv
+2025-03-14 18:03:52,936 - app.history.manager - INFO - History manager initialised successfully with history file: {self.history_file}
+2025-03-14 18:03:52,936 - root - INFO - Registered command: HistoryCommand in plugin: history
+2025-03-14 18:03:52,936 - root - INFO - Completed loading plugins
+2025-03-14 18:03:52,936 - root - INFO - Registered command: MenuCommand in plugin: menu with command handler
+2025-03-14 18:03:52,936 - root - INFO - Completed loading plugins
+2025-03-14 18:03:52,936 - root - INFO - Registered command: MultiplyCommand in plugin: multiply
+2025-03-14 18:03:52,936 - root - INFO - Completed loading plugins
+2025-03-14 18:03:52,937 - root - INFO - Registered command: SubCommand in plugin: sub
+2025-03-14 18:03:52,937 - root - INFO - Completed loading plugins
+2025-03-14 18:03:55,700 - root - INFO - Executing Add Command
+2025-03-14 18:03:56,753 - root - INFO - Value entered: 3.0
+2025-03-14 18:03:57,821 - root - INFO - Value entered: 32.0
+2025-03-14 18:03:57,821 - root - INFO - Addition Performed: 3.0 + 32.0 = 35.0
+2025-03-14 18:04:20,414 - root - INFO - Exit command entered. Exiting the program
+2025-03-14 18:04:45,172 - app.config - INFO - Logging configured with level: INFO, file: logs/app.log
+2025-03-14 18:04:45,173 - app.history.manager - INFO - History Manager initialised
+2025-03-14 18:04:45,174 - app.history.manager - INFO - History loaded from data/calculation_history.csv
+2025-03-14 18:04:45,174 - app.history.manager - INFO - History manager initialised successfully with history file: {self.history_file}
+2025-03-14 18:04:45,174 - app.history.manager - INFO - History Manager initialised
+2025-03-14 18:04:45,175 - app.history.manager - INFO - History loaded from data/calculation_history.csv
+2025-03-14 18:04:45,175 - app.history.manager - INFO - History manager initialised successfully with history file: {self.history_file}
+2025-03-14 18:04:45,176 - app.history.manager - INFO - Calculation added to history: {'timestamp': '2025-03-14 18:04:45', 'operation': 'add', 'inputs': '[1, 2]', 'result': 3}
+2025-03-14 18:04:45,176 - app.history.manager - INFO - History Manager initialised
+2025-03-14 18:04:45,176 - app.history.manager - INFO - History loaded from data/calculation_history.csv
+2025-03-14 18:04:45,176 - app.history.manager - INFO - History manager initialised successfully with history file: {self.history_file}
+2025-03-14 18:04:45,177 - app.history.manager - INFO - History saved to data/calculation_history.csv
+2025-03-14 18:04:45,177 - root - INFO - History Manager initialized
+2025-03-14 18:04:45,178 - root - INFO - Starting Application
+2025-03-14 18:04:45,178 - root - INFO - Loading Plugins
+2025-03-14 18:04:45,178 - root - INFO - Registered command: AddCommand in plugin: add
+2025-03-14 18:04:45,179 - root - INFO - Completed loading plugins
+2025-03-14 18:04:45,179 - root - INFO - Registered command: DivideCommand in plugin: divide
+2025-03-14 18:04:45,179 - root - INFO - Completed loading plugins
+2025-03-14 18:04:45,180 - root - INFO - Registered command: ExitCommand in plugin: exit
+2025-03-14 18:04:45,180 - root - INFO - Completed loading plugins
+2025-03-14 18:04:45,180 - root - INFO - Registered command: GreetCommand in plugin: greet
+2025-03-14 18:04:45,180 - root - INFO - Completed loading plugins
+2025-03-14 18:04:45,182 - app.history.manager - INFO - History Manager initialised
+2025-03-14 18:04:45,183 - app.history.manager - INFO - History loaded from data/calculation_history.csv
+2025-03-14 18:04:45,183 - app.history.manager - INFO - History manager initialised successfully with history file: {self.history_file}
+2025-03-14 18:04:45,183 - root - INFO - Registered command: HistoryCommand in plugin: history
+2025-03-14 18:04:45,183 - root - INFO - Completed loading plugins
+2025-03-14 18:04:45,184 - root - INFO - Registered command: MenuCommand in plugin: menu with command handler
+2025-03-14 18:04:45,184 - root - INFO - Completed loading plugins
+2025-03-14 18:04:45,184 - root - INFO - Registered command: MultiplyCommand in plugin: multiply
+2025-03-14 18:04:45,184 - root - INFO - Completed loading plugins
+2025-03-14 18:04:45,185 - root - INFO - Registered command: SubCommand in plugin: sub
+2025-03-14 18:04:45,185 - root - INFO - Completed loading plugins
+2025-03-14 18:04:49,158 - root - INFO - Executing Add Command
+2025-03-14 18:04:50,130 - root - INFO - Value entered: 5.0
+2025-03-14 18:04:50,815 - root - INFO - Value entered: 6.0
+2025-03-14 18:04:50,815 - root - INFO - Addition Performed: 5.0 + 6.0 = 11.0
+2025-03-14 18:04:56,014 - app.history.manager - INFO - History saved to data/calculation_history.csv
+2025-03-14 18:05:29,162 - root - INFO - Exit command entered. Exiting the program
+2025-03-14 18:06:27,622 - app.config - INFO - Logging configured with level: INFO, file: logs/app.log
+2025-03-14 18:06:27,623 - app.history.manager - INFO - History Manager initialised
+2025-03-14 18:06:27,624 - app.history.manager - INFO - History loaded from data/calculation_history.csv
+2025-03-14 18:06:27,624 - app.history.manager - INFO - History manager initialised successfully with history file: {self.history_file}
+2025-03-14 18:06:27,624 - app.history.manager - INFO - History Manager initialised
+2025-03-14 18:06:27,624 - app.history.manager - INFO - History loaded from data/calculation_history.csv
+2025-03-14 18:06:27,624 - app.history.manager - INFO - History manager initialised successfully with history file: {self.history_file}
+2025-03-14 18:06:27,625 - app.history.manager - INFO - Calculation added to history: {'timestamp': '2025-03-14 18:06:27', 'operation': 'add', 'inputs': '[1, 2]', 'result': 3}
+2025-03-14 18:06:27,625 - app.history.manager - INFO - History Manager initialised
+2025-03-14 18:06:27,625 - app.history.manager - INFO - History loaded from data/calculation_history.csv
+2025-03-14 18:06:27,625 - app.history.manager - INFO - History manager initialised successfully with history file: {self.history_file}
+2025-03-14 18:06:27,626 - app.history.manager - INFO - History saved to data/calculation_history.csv
+2025-03-14 18:06:27,626 - root - INFO - History Manager initialized
+2025-03-14 18:06:27,626 - root - INFO - Starting Application
+2025-03-14 18:06:27,626 - root - INFO - Loading Plugins
+2025-03-14 18:06:27,626 - root - INFO - Registered command: AddCommand in plugin: add
+2025-03-14 18:06:27,626 - root - INFO - Completed loading plugins
+2025-03-14 18:06:27,627 - root - INFO - Registered command: DivideCommand in plugin: divide
+2025-03-14 18:06:27,627 - root - INFO - Completed loading plugins
+2025-03-14 18:06:27,627 - root - INFO - Registered command: ExitCommand in plugin: exit
+2025-03-14 18:06:27,627 - root - INFO - Completed loading plugins
+2025-03-14 18:06:27,627 - root - INFO - Registered command: GreetCommand in plugin: greet
+2025-03-14 18:06:27,627 - root - INFO - Completed loading plugins
+2025-03-14 18:06:27,628 - app.history.manager - INFO - History Manager initialised
+2025-03-14 18:06:27,629 - app.history.manager - INFO - History loaded from data/calculation_history.csv
+2025-03-14 18:06:27,629 - app.history.manager - INFO - History manager initialised successfully with history file: {self.history_file}
+2025-03-14 18:06:27,629 - root - INFO - Registered command: HistoryCommand in plugin: history
+2025-03-14 18:06:27,629 - root - INFO - Completed loading plugins
+2025-03-14 18:06:27,629 - root - INFO - Registered command: MenuCommand in plugin: menu with command handler
+2025-03-14 18:06:27,629 - root - INFO - Completed loading plugins
+2025-03-14 18:06:27,630 - root - INFO - Registered command: MultiplyCommand in plugin: multiply
+2025-03-14 18:06:27,630 - root - INFO - Completed loading plugins
+2025-03-14 18:06:27,630 - root - INFO - Registered command: SubCommand in plugin: sub
+2025-03-14 18:06:27,630 - root - INFO - Completed loading plugins
+2025-03-14 18:24:58,975 - root - INFO - Exit command entered. Exiting the program
+2025-03-14 18:25:34,669 - app.config - INFO - Logging configured with level: INFO, file: logs/app.log
+2025-03-14 18:25:34,669 - app.history.manager - INFO - History Manager initialised
+2025-03-14 18:25:34,670 - app.history.manager - INFO - History loaded from data/calculation_history.csv
+2025-03-14 18:25:34,670 - app.history.manager - INFO - History manager initialised successfully with history file: {self.history_file}
+2025-03-14 18:25:34,670 - app.history.manager - INFO - History Manager initialised
+2025-03-14 18:25:34,671 - app.history.manager - INFO - History loaded from data/calculation_history.csv
+2025-03-14 18:25:34,671 - app.history.manager - INFO - History manager initialised successfully with history file: {self.history_file}
+2025-03-14 18:25:34,671 - app.history.manager - INFO - Calculation added to history: {'timestamp': '2025-03-14 18:25:34', 'operation': 'add', 'inputs': '[1, 2]', 'result': 3}
+2025-03-14 18:25:34,671 - app.history.manager - INFO - History Manager initialised
+2025-03-14 18:25:34,672 - app.history.manager - INFO - History loaded from data/calculation_history.csv
+2025-03-14 18:25:34,672 - app.history.manager - INFO - History manager initialised successfully with history file: {self.history_file}
+2025-03-14 18:25:34,673 - app.history.manager - INFO - History saved to data/calculation_history.csv
+2025-03-14 18:25:34,673 - root - INFO - History Manager initialized
+2025-03-14 18:25:34,673 - root - INFO - Starting Application
+2025-03-14 18:25:34,673 - root - INFO - Loading Plugins
+2025-03-14 18:25:34,673 - root - INFO - Registered command: AddCommand in plugin: add
+2025-03-14 18:25:34,673 - root - INFO - Completed loading plugins
+2025-03-14 18:25:34,673 - root - INFO - Registered command: DivideCommand in plugin: divide
+2025-03-14 18:25:34,674 - root - INFO - Completed loading plugins
+2025-03-14 18:25:34,674 - root - INFO - Registered command: ExitCommand in plugin: exit
+2025-03-14 18:25:34,674 - root - INFO - Completed loading plugins
+2025-03-14 18:25:34,674 - root - INFO - Registered command: GreetCommand in plugin: greet
+2025-03-14 18:25:34,674 - root - INFO - Completed loading plugins
+2025-03-14 18:25:34,675 - app.history.manager - INFO - History Manager initialised
+2025-03-14 18:25:34,676 - app.history.manager - INFO - History loaded from data/calculation_history.csv
+2025-03-14 18:25:34,676 - app.history.manager - INFO - History manager initialised successfully with history file: {self.history_file}
+2025-03-14 18:25:34,676 - root - INFO - Registered command: HistoryCommand in plugin: history
+2025-03-14 18:25:34,676 - root - INFO - Completed loading plugins
+2025-03-14 18:25:34,676 - root - INFO - Registered command: MenuCommand in plugin: menu with command handler
+2025-03-14 18:25:34,676 - root - INFO - Completed loading plugins
+2025-03-14 18:25:34,677 - root - INFO - Registered command: MultiplyCommand in plugin: multiply
+2025-03-14 18:25:34,677 - root - INFO - Completed loading plugins
+2025-03-14 18:25:34,677 - root - INFO - Registered command: SubCommand in plugin: sub
+2025-03-14 18:25:34,677 - root - INFO - Completed loading plugins
+2025-03-14 18:25:36,976 - root - INFO - Executing Add Command
+2025-03-14 18:25:37,685 - root - INFO - Value entered: 3.0
+2025-03-14 18:25:38,831 - root - INFO - Value entered: 32.0
+2025-03-14 18:25:38,831 - root - INFO - Addition Performed: 3.0 + 32.0 = 35.0
+2025-03-14 18:25:38,832 - app.history.manager - INFO - History Manager initialised
+2025-03-14 18:25:38,833 - app.history.manager - INFO - History loaded from data/calculation_history.csv
+2025-03-14 18:25:38,834 - app.history.manager - INFO - History manager initialised successfully with history file: {self.history_file}
+2025-03-14 18:25:38,835 - app.history.manager - INFO - Calculation added to history: {'timestamp': '2025-03-14 18:25:38', 'operation': 'add', 'inputs': '[3.0, 32.0]', 'result': 35.0}
+2025-03-14 18:25:38,836 - app.history.manager - INFO - History saved to data/calculation_history.csv
+2025-03-14 18:26:30,164 - app.history.manager - INFO - History Cleared
+2025-03-14 18:26:49,388 - root - INFO - Executing Add Command
+2025-03-14 18:26:52,559 - root - INFO - Value entered: 45.0
+2025-03-14 18:26:54,020 - root - INFO - Value entered: 34.0
+2025-03-14 18:26:54,020 - root - INFO - Addition Performed: 45.0 + 34.0 = 79.0
+2025-03-14 18:26:54,020 - app.history.manager - INFO - History Manager initialised
+2025-03-14 18:26:54,023 - app.history.manager - INFO - History loaded from data/calculation_history.csv
+2025-03-14 18:26:54,023 - app.history.manager - INFO - History manager initialised successfully with history file: {self.history_file}
+2025-03-14 18:26:54,023 - app.history.manager - INFO - Calculation added to history: {'timestamp': '2025-03-14 18:26:54', 'operation': 'add', 'inputs': '[45.0, 34.0]', 'result': 79.0}
+2025-03-14 18:26:54,024 - app.history.manager - INFO - History saved to data/calculation_history.csv
+2025-03-14 18:27:50,199 - root - INFO - Executing Sub Command
+2025-03-14 18:27:51,374 - root - INFO - Value entered: 23.0
+2025-03-14 18:27:53,007 - root - INFO - Value entered: 20.0
+2025-03-14 18:27:53,007 - root - INFO - Subtraction Performed: 23.0 - 20.0 = 3.0
+2025-03-14 18:27:53,007 - app.history.manager - INFO - History Manager initialised
+2025-03-14 18:27:53,010 - app.history.manager - INFO - History loaded from data/calculation_history.csv
+2025-03-14 18:27:53,010 - app.history.manager - INFO - History manager initialised successfully with history file: {self.history_file}
+2025-03-14 18:27:53,011 - app.history.manager - INFO - Calculation added to history: {'timestamp': '2025-03-14 18:27:53', 'operation': 'sub', 'inputs': '[23.0, 20.0]', 'result': 3.0}
+2025-03-14 18:27:53,012 - app.history.manager - INFO - History saved to data/calculation_history.csv
+2025-03-14 18:54:09,222 - root - INFO - Exit command entered. Exiting the program
