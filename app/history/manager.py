@@ -27,7 +27,7 @@ class HistoryManager:
         if not getattr(self, '__initialized', False):
             self.logger = logging.getLogger(__name__)
             self.logger.info('History Manager initialised')
-            self.history_file = os.environ.get('HISTORY_FILE', 'history.csv')
+            self.history_file = os.environ.get('HISTORY_FILE', 'data/calculation_history.csv')
 
             history_dir = Path(self.history_file).parent
             if not history_dir.exists():
@@ -56,7 +56,7 @@ class HistoryManager:
                 self.logger.info(f"History loaded from {self.history_file}")
             else:
                 self.df = pd.DataFrame(columns=self.columns)
-                self.logger.info(f"History file not found, creating new file: {self.history_file}")
+                self.logger.info(f"History file not found, creating new file: '{self.history_file}'")
         except Exception as e:
             self.logger.error(f"Failed to load history file: {e}")
             raise e
@@ -77,16 +77,13 @@ class HistoryManager:
             self.logger.error(f"Failed to add calculation to history: {e}")
             return False
     
-    def save_history(self) -> bool:
+    def save_history(self):
             """save history to csv file"""
             try:
-                history_dir = Path(self.history_file).parent
-                if not history_dir.exists():
-                    history_dir.mkdir(parents=True, exists_ok=True)
-
-                    self.df.to_csv(self.history_file, index=False)
-                    self.logger.info(f"History saved to {self.history_file}")
-                    return True
+                os.makedirs(os.path.dirname(self.history_file), exist_ok=True)
+                self.df.to_csv(self.history_file, index=False)
+                self.logger.info(f"History saved to {self.history_file}")
+                return True
             except Exception as e:
                     self.logger.error(f"Failed to save history file: {e}")
                     return False
@@ -113,7 +110,7 @@ class HistoryManager:
     def delete_entry(self, index:int) -> bool:
         """delete entry from history"""
         try:
-            if 0<= index < len(self):
+            if 0<= index < len(self.df):
                 self.df = self.df.drop(index).reset_index(drop=True)
                 self.logger.info(f"Entry deleted from history: {index}")    
                 return True
@@ -137,7 +134,7 @@ class HistoryManager:
         except Exception as e:  
             self.logger.error(f"Failed to search history: {e}")
             return pd.DataFrame()
-  
+
 
 
 

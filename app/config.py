@@ -22,7 +22,7 @@ def load_config():
 def ensure_directory_exists(directory):
     if not directory.exists():
         try:
-            directory.mkdir(parents=True, exists_ok=True)
+            directory.mkdir(parents=True, exist_ok=True)
         except Exception as e:
             print(f"Failed to create directory: {e}")
             logging.warning(f"Failed to create directory: {e}")
@@ -46,5 +46,5 @@ def setup_logging(config):
 
     logger = logging.getLogger(__name__)
     logger.info(f"Logging configured with level: {log_level_name}, file: {log_file}")
-    
+
     

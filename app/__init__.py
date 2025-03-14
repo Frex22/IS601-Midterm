@@ -34,12 +34,16 @@ class App:
     
         # Initialize HistoryManager
         self.history_manager = HistoryManager()
+        
+        HistoryManager().add_calculation('add', [1, 2], 3)
+        HistoryManager().save_history()
+
         logging.info('History Manager initialized')
     
         # Initialize CommandHandler
         self.command_handler = CommandHandler()
 
-
+        
 
     #dynamically load all plugins
     def load_plugins(self):
@@ -57,7 +61,7 @@ class App:
                     plugin_module = importlib.import_module(f'{plugins_package}.{plugin_name}')
                     logging.debug(f'Loaded Plugin: {plugin_name}')
                 except Exception as e:
-                    logging.error(f'Failed to load plugin: {plugin_name}')
+                    logging.error(f'Failed to load plugin: {plugin_name}', exc_info=True)
                     continue
 
                 for item_name in dir(plugin_module):
