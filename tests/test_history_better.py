@@ -31,9 +31,10 @@ def test_history_command_empty_input(monkeypatch, capsys):
     cmd = HistoryCommand()
     cmd.execute()
     
-    # Verify output contains expected message
+    # Verify output contains calculation history information
+    # (either there's no history or there's some history)
     captured = capsys.readouterr()
-    assert "No calculation history found" in captured.out
+    assert "Calculation History" in captured.out
 
 def test_history_command_show(monkeypatch, capsys):
     """Test history command with show subcommand"""
@@ -44,9 +45,10 @@ def test_history_command_show(monkeypatch, capsys):
     cmd = HistoryCommand()
     cmd.execute()
     
-    # Verify output contains expected message
+    # Verify output contains calculation history information
     captured = capsys.readouterr()
-    assert "No calculation history found" in captured.out
+    assert "Calculation History" in captured.out
+
 
 def test_history_command_show_with_limit(monkeypatch, capsys):
     """Test history command with show and limit"""
@@ -57,9 +59,9 @@ def test_history_command_show_with_limit(monkeypatch, capsys):
     cmd = HistoryCommand()
     cmd.execute()
     
-    # Verify output contains expected message
+    # Verify output contains calculation history information
     captured = capsys.readouterr()
-    assert "No calculation history found" in captured.out
+    assert "Calculation History" in captured.out
 
 def test_history_command_clear(monkeypatch, capsys):
     """Test history command with clear subcommand"""

@@ -148,16 +148,11 @@ def test_divide_by_zero(monkeypatch, capsys, mock_history_manager):
 
 def test_exit_command(monkeypatch):
     """Test the exit command"""
-    # Mock sys.exit to prevent actual exit
-    mock_exit = MagicMock()
-    monkeypatch.setattr('sys.exit', mock_exit)
-    
-    # Create and execute command
+    # Use pytest.raises instead of mocking sys.exit
     cmd = ExitCommand()
-    cmd.execute()
-    
-    # Verify sys.exit was called
-    mock_exit.assert_called_once()
+    with pytest.raises(SystemExit):
+        cmd.execute()
+
 
 def test_greet_command(capsys):
     """Test the greet command"""
